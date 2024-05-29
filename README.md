@@ -22,7 +22,7 @@ mvn package
 
 The relevant artifact will be generated in the target folder, under the name managed-kafka-auth-login-handler-<version>.jar. Copy this JAR file to your client libs folder so it is included in its Java classpath.
 
-1. Configure your client, including the following authentication properties.
+2. Configure your client, including the following authentication properties.
 ```
 security.protocol=SASL_SSL
 sasl.mechanism=OAUTHBEARER
@@ -48,13 +48,13 @@ source <your-env>/bin/activate
 <your-env>/bin/pip install google-auth
 ```
 
-1. Run the server.
+2. Run the server.
 ```
 kafka-auth-local-server/kafka_gcp_credentials_server.py
 ```
 It should print a line like `Serving on localhost:14293. This is not accessible outside of the current machine.`
 
-1. Configure your client, including the following authentication properties.
+3. Configure your client, including the following authentication properties.
 ```
 security.protocol=SASL_SSL
 sasl.mechanism=OAUTHBEARER
