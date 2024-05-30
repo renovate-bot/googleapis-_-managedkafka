@@ -8,6 +8,17 @@
   <name>Managed Kafka Auth</name>
   <url>https://github.com/googleapis/managedkafka</url>
   <description>Kafka Auth Login Handler for Google's Apache Kafka for BigQuery</description>
+  <organization>
+    <name>Google</name>
+    <url>http://www.google.com/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <properties>
     <maven.compiler.source>1.10</maven.compiler.source>
     <maven.compiler.target>1.10</maven.compiler.target>
