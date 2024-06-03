@@ -64,8 +64,5 @@ sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginMo
   required clientId="admin" clientSecret="unused";
 ```
 
-[^1] Apache Kafka is a registered trademark owned by the Apache Software Foundation. 
-
-
-
+* *Apache Kafka is a registered trademark owned by the Apache Software Foundation.*
 
