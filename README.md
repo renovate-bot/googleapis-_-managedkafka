@@ -1,6 +1,6 @@
-# Apache Kafka for BigQuery Client Auth
+# Apache Kafka [TM] for BigQuery Client Auth
 
-Client-side Kafka software libraries enabling authentication with Google Cloud Apache Kafka for BigQuery using Google's OAuth via Kafka's OAUTHBEARER mechanism.
+Client-side Kafka software libraries enabling authentication with Google Cloud Apache Kafka for BigQuery. These libraries allow you to authenticate with the service using [application default credentials](http://cloud/docs/authentication/provide-credentials-adc). This is a safer and simpler authentication mechanism than using service account keys directly. The method relies on Google's OAuth via Kafka's OAUTHBEARER mechanism.
 
 The following presents two alternatives for configuring your Kafka clients to use Google's authentication mechanisms in order to connect with clusters deployed using Apache Kafka for BigQuery.
 
@@ -22,7 +22,7 @@ mvn package
 
 The relevant artifact will be generated in the target folder, under the name managed-kafka-auth-login-handler-<version>.jar. Copy this JAR file to your client libs folder so it is included in its Java classpath.
 
-2. Configure your client, including the following authentication properties.
+2. Configure your Kafka client, including the following authentication properties.
 ```
 security.protocol=SASL_SSL
 sasl.mechanism=OAUTHBEARER
@@ -64,6 +64,7 @@ sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginMo
   required clientId="admin" clientSecret="unused";
 ```
 
+[^1] Apache Kafka is a registered trademark owned by the Apache Software Foundation. 
 
 
 
