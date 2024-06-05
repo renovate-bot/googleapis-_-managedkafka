@@ -17,12 +17,21 @@ Follow the steps below to get your client setup.
 1. Build the supporting JAR.
 ```
 cd kafka-java-auth
-mvn package
+mvn install
 ```
 
-The relevant artifact will be generated in the target folder, under the name managed-kafka-auth-login-handler-<version>.jar. Copy this JAR file to your client libs folder so it is included in its Java classpath.
+The relevant artifact will be generated and placed in your local maven repository. 
 
-2. Configure your Kafka client, including the following authentication properties.
+2. Then you can include the following dependency in your build to include the library along with its dependencies.
+```
+<dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-managed-kafka-auth-login-handler</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+3. Configure your Kafka client, including the following authentication properties.
 ```
 security.protocol=SASL_SSL
 sasl.mechanism=OAUTHBEARER
